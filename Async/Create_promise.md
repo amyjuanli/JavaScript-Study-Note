@@ -1,4 +1,3 @@
-# PROMISES 
 ## Create a promise - calling `Promise.resolve`
 This is a easies way to create a promise.
 ```javascript
@@ -83,4 +82,3 @@ var promiseValue = new Promise(function(fulfill) {
 
 // #2: 
 ```
-

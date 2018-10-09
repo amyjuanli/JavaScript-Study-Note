@@ -1,4 +1,4 @@
-## Using operators: `delete`, `in`
+- Operations: `delete`, `in`
 
 ```javascript
 let anObject = { left: 1, right: 2 };
@@ -26,7 +26,7 @@ console.log("right" in anObject);
 // → true
 ```
 
-### Other useful methods:
+- keys/property
 
 ```javascript
 // find out what properties an object has
@@ -39,6 +39,11 @@ Object.assign(objectA, { b: 3, c: 4 });
 console.log(objectA);
 // → {a: 1, b: 3, c: 4}
 ```
+
+- _if (key in object)_
+  return true if _key_ is found somewhere even in the prototype chain,
+- _if (object.hasOwnProperty(key))_:  
+   return true only if _key_ is available on that object directly (which means the object owns that key property)
 
 ## IMMUTABILITY
 
@@ -83,22 +88,3 @@ score = { visitors: 1, home: 1 };
 only produce _true_ only if both objects are precisely the same value.  
 Comparing different objects will return _false_, even if they have identical  
 properties.
-
-## MODERN JS
-
-```javascript
-for (let i = 0; i < JOURNAL.length; i++) {
-  let entry = JOURNAL[i];
-  // Do something with entry
-}
-```
-
-Equal to:
-
-```javascript
-for (let entry of JOURNAL) {
-  console.log(`${entry.events.length} events.`);
-}
-```
-
-This works for arrays, strings, and some other data structures.
